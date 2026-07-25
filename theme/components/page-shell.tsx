@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import { SiteFooter, SiteHeader } from "@/components/layout/site-chrome";
-
+import {ReactLenis} from "lenis/react"
 export default function PageShell({
   children,
 }: Readonly<{
@@ -9,7 +9,8 @@ export default function PageShell({
   return (
     <>
       <SiteHeader />
-      <main className="starter-page">{children}</main>
+      <ReactLenis root/>
+        <main className="starter-page">{children}</main>
       <SiteFooter />
     </>
   );
