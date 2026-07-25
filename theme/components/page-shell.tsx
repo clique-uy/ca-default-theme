@@ -10,6 +10,9 @@ export default function PageShell({
     <>
       <SiteHeader />
       <ReactLenis root/>
+      <p>
+        {JSON.stringify(Math.random())}
+      </p>
         <main className="starter-page">{children}</main>
       <SiteFooter />
     </>
