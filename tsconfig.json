@@ -1,0 +1,65 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "typeRoots": [
+      "../my-saas-frontend/node_modules/@types"
+    ],
+    "paths": {
+      "@/*": [
+        "../my-saas-frontend/*"
+      ],
+      "react": [
+        "../my-saas-frontend/node_modules/@types/react/index.d.ts"
+      ],
+      "react/jsx-runtime": [
+        "../my-saas-frontend/node_modules/@types/react/jsx-runtime.d.ts"
+      ],
+      "react/jsx-dev-runtime": [
+        "../my-saas-frontend/node_modules/@types/react/jsx-dev-runtime.d.ts"
+      ],
+      "react-dom": [
+        "../my-saas-frontend/node_modules/@types/react-dom/index.d.ts"
+      ],
+      "react-dom/*": [
+        "../my-saas-frontend/node_modules/@types/react-dom/*"
+      ],
+      "next": [
+        "../my-saas-frontend/node_modules/next/dist/server/next.d.ts"
+      ],
+      "next/*": [
+        "../my-saas-frontend/node_modules/next/*"
+      ],
+      "lenis": [
+        "../my-saas-frontend/node_modules/lenis/dist/lenis.d.ts"
+      ],
+      "lenis/react": [
+        "../my-saas-frontend/node_modules/lenis/dist/lenis-react.d.ts"
+      ],
+      "lucide-react": [
+        "../my-saas-frontend/node_modules/lucide-react"
+      ]
+    }
+  },
+  "include": [
+    "theme/**/*.ts",
+    "theme/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

@@ -1,0 +1,6 @@
+apiVersion: clique.dev/v3
+kind: FrontendTheme
+metadata:
+  id: test-theme
+spec:
+  contractVersion: auction-web-v2
