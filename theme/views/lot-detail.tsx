@@ -15,7 +15,47 @@ export default function LotDetail({
   const [tab, setTab] = useState<DetailTab>("details");
 
   if (loading) {
-    return <div className="market-state" role="status">Cargando lote…</div>;
+    return (
+      <div className="lot-detail-shell lot-detail-skeleton" aria-busy="true" role="status">
+        <span className="sr-only">Cargando lote…</span>
+
+        <div className="lot-detail-skeleton-bar lot-detail-skeleton-breadcrumb" />
+        <div className="lot-detail-skeleton-status">
+          <div className="lot-detail-skeleton-bar" />
+          <div className="lot-detail-skeleton-bar" />
+        </div>
+
+        <section className="lot-detail-primary" aria-hidden="true">
+          <div className="lot-detail-gallery">
+            <div className="lot-detail-image lot-detail-skeleton-block" />
+          </div>
+
+          <div className="lot-detail-copy">
+            <div className="lot-detail-skeleton-bar lot-detail-skeleton-heading" />
+            <div className="lot-detail-skeleton-bar lot-detail-skeleton-meta" />
+
+            <div className="lot-detail-bid-panel">
+              <div className="lot-detail-skeleton-bar lot-detail-skeleton-label" />
+              <div className="lot-detail-skeleton-bar lot-detail-skeleton-price" />
+              <div className="lot-detail-skeleton-bar lot-detail-skeleton-input" />
+              <div className="lot-detail-skeleton-bar lot-detail-skeleton-button" />
+            </div>
+
+            <div className="lot-detail-trust">
+              <div className="lot-detail-skeleton-bar lot-detail-skeleton-trust-title" />
+              <div className="lot-detail-skeleton-bar lot-detail-skeleton-line" />
+              <div className="lot-detail-skeleton-bar lot-detail-skeleton-line is-short" />
+            </div>
+          </div>
+        </section>
+
+        <div className="lot-detail-skeleton-tabs" aria-hidden="true">
+          <div className="lot-detail-skeleton-bar" />
+          <div className="lot-detail-skeleton-bar" />
+          <div className="lot-detail-skeleton-bar" />
+        </div>
+      </div>
+    );
   }
 
   if (loadError || !lot) {
