@@ -593,6 +593,73 @@
   gap: 20px;
 }
 
+.wishlist-skeleton-bar {
+  display: block;
+  border-radius: 6px;
+  background: linear-gradient(
+    90deg,
+    #e8ebef 0%,
+    #f3f5f7 45%,
+    #e8ebef 90%
+  );
+  background-size: 200% 100%;
+  animation: wishlist-skeleton-pulse 1.4s ease-in-out infinite;
+}
+
+.wishlist-skeleton-title {
+  width: min(220px, 55%);
+  height: 22px;
+}
+
+.wishlist-skeleton-meta {
+  width: 72px;
+  height: 14px;
+}
+
+.wishlist-skeleton-card {
+  pointer-events: none;
+}
+
+.wishlist-skeleton-photo {
+  background-color: #e8ebef;
+  background-image: linear-gradient(
+    90deg,
+    #e8ebef 0%,
+    #f3f5f7 45%,
+    #e8ebef 90%
+  );
+  background-size: 200% 100%;
+  animation: wishlist-skeleton-pulse 1.4s ease-in-out infinite;
+}
+
+.wishlist-skeleton-status {
+  width: 42%;
+  height: 12px;
+  margin-bottom: 8px;
+}
+
+.wishlist-skeleton-name {
+  width: 88%;
+  height: 16px;
+  margin: 6px 0 8px;
+}
+
+.wishlist-skeleton-auction {
+  width: 64%;
+  height: 12px;
+}
+
+.wishlist-skeleton-price {
+  width: 36%;
+  height: 18px;
+  margin-top: 14px;
+}
+
+@keyframes wishlist-skeleton-pulse {
+  0% { background-position: 100% 0; }
+  100% { background-position: -100% 0; }
+}
+
 .lot-detail-shell {
   width: min(1180px, calc(100% - 40px));
   padding: 20px 0 64px;
